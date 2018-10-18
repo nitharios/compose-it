@@ -1,1 +1,1 @@
-# compose-it
+# react-compose
