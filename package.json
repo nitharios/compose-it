@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/nitharios/compose-it/issues"
   },
-  "homepage": "https://github.com/nitharios/compose-it#readme"
+  "homepage": "https://github.com/nitharios/compose-it#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
