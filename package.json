@@ -15,6 +15,9 @@
   },
   "author": "",
   "license": "ISC",
+  "bin": {
+    "compose-it": "./bin"
+  },
   "bugs": {
     "url": "https://github.com/nitharios/compose-it/issues"
   },
