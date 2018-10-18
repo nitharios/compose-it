@@ -1,8 +1,8 @@
+#!/usr/bin/env node
 const minimist = require('minimist');
-
 const { dir, files } = require('./lib');
 
-const run = async () => {
+module.exports = () => {
   const args = minimist(process.argv.slice(2))
   let cmd = args._[0];
 
@@ -23,5 +23,3 @@ const run = async () => {
   dir.createDirectory(dirName);
   files.createFiles(dirName, userName);
 }
-
-run();

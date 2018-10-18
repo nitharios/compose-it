@@ -1,6 +1,6 @@
 {
-  "name": "compose-it",
-  "version": "1.0.0",
+  "name": "compose-it-test",
+  "version": "0.0.10",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "compose-it": "./bin"
+    "compose-it-test": "./.bin/index.js"
   },
   "bugs": {
     "url": "https://github.com/nitharios/compose-it/issues"
