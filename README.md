@@ -5,7 +5,7 @@ Create a project template for *docker-compose* and *React*
 ## installation
 Using npx:
 ```
-  compose-it [options] [arguments]
+  npx compose-it [options] [arguments]
 ```
 
 Options:
