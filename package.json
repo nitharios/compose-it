@@ -1,7 +1,8 @@
 {
   "name": "compose-it",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
+  "keywords":["react", "docker", "docker-compose"],
   "main": "index.js",
   "directories": {
     "lib": "lib"
