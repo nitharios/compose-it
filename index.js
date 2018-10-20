@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const minimist = require('minimist');
 const { dir, files } = require('./lib');
+const { exec } = require('child_process');
+const { createReactApp } = require('./lib/scripts');
 
 module.exports = () => {
   const args = minimist(process.argv.slice(2))
@@ -22,4 +24,13 @@ module.exports = () => {
   
   dir.createDirectory(dirName);
   files.createFiles(dirName, userName);
+
+  exec(createReactApp(dirName), (err, stdout, stderr) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+
+    console.log(stdout);
+  })
 }
