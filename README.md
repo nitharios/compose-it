@@ -1,5 +1,7 @@
 # compose-it
 
+Create a project template for *docker-compose* and *React*
+
 ## installation
 Using npx:
 ```
@@ -18,4 +20,4 @@ Options:
     define the username associated with images
 ```
 
-See the [package source](https://github.com/nitharios/compose-it)
+Check out the [package source](https://github.com/nitharios/compose-it)!
