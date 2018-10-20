@@ -34,9 +34,12 @@ module.exports = () => {
   exec(createReactApp(dirName), (err, stdout, stderr) => {
     if (err) {
       console.log(err);
+      
       return;
     }
 
     console.log(stdout);
+    console.log(`Successfully created project ${dirName}`);
+  
   })
 }
