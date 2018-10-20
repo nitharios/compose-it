@@ -2,6 +2,7 @@
 const minimist = require('minimist');
 const { dir, files } = require('./lib');
 const { exec } = require('child_process');
+const { help } = require('./lib/commands');
 const { createReactApp } = require('./lib/scripts');
 
 module.exports = () => {
@@ -11,7 +12,7 @@ module.exports = () => {
   let userName, dirName;
 
   if (cmd === 'help') {
-    return require('./lib/commands/help')(args);
+    return help(args);
   }
 
   if (args.username || args.u) {
