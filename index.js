@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const minimist = require('minimist');
 const { exec } = require('child_process');
 const { directoryExists, help } = require('./lib/responses');
