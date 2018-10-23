@@ -6,19 +6,20 @@ const { checkPath, createDirectory, createFiles, createReactApp } = require('./l
 module.exports = () => {
   const args = minimist(process.argv.slice(2))
   let cmd = args._[0];
-
   let userName, dirName;
-
+  
   // protect against missing arguments
-  if (!cmd || cmd === 'help' || !args.username && !args.u || !args.project && args.d) {
+  if (cmd === 'help' || cmd) {
     return help(args);
   }
 
-  if (args.username || args.u) {
+  if (args.username && typeof args.username === 'string' || args.u && typeof args.u === 'string') {
     userName = args.username ? args.username : args.u;
+  } else {
+    return help(args);
   }
 
-  if (args.project || args.d) {
+  if (args.project && typeof args.project === 'string' || args.d && typeof args.d === 'string') {
     if (checkPath(args.project)) {
       return directoryExists(args.project);
     } else if (checkPath(args.d)) {
@@ -26,6 +27,8 @@ module.exports = () => {
     }
 
     dirName = args.project ? args.project : args.d;
+  } else {
+    return help(args);
   }
   
   createDirectory(dirName);
