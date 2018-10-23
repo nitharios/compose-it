@@ -9,7 +9,8 @@ module.exports = () => {
 
   let userName, dirName;
 
-  if (cmd === 'help') {
+  // protect against missing arguments
+  if (!cmd || cmd === 'help' || !args.username && !args.u || !args.project && args.d) {
     return help(args);
   }
 
