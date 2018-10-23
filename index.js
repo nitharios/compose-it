@@ -1,5 +1,4 @@
 const minimist = require('minimist');
-const { exec } = require('child_process');
 const { directoryExists, help } = require('./lib/responses');
 const { checkPath, createDirectory, createFiles, createReactApp } = require('./lib/scripts');
 
@@ -33,16 +32,5 @@ module.exports = () => {
   
   createDirectory(dirName);
   createFiles(dirName, userName);
-
-  exec(createReactApp(dirName), (err, stdout, stderr) => {
-    if (err) {
-      console.log(err);
-      
-      return;
-    }
-
-    console.log(stdout);
-    console.log(`Successfully created project ${dirName}`);
-  
-  })
+  createReactApp(dirName, true);
 }
